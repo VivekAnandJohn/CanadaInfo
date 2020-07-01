@@ -12,6 +12,14 @@
 		8BAAED1B24AC995500269666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAAED1924AC995500269666 /* LaunchScreen.storyboard */; };
 		8BAAED2624AC995500269666 /* CanadaInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED2524AC995500269666 /* CanadaInfoTests.swift */; };
 		8BAAED3124AC995500269666 /* CanadaInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED3024AC995500269666 /* CanadaInfoUITests.swift */; };
+		8BAAED4724ACA10300269666 /* AboutCanadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4624ACA10300269666 /* AboutCanadaViewController.swift */; };
+		8BAAED4924ACA11F00269666 /* AboutCanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4824ACA11F00269666 /* AboutCanadaViewModel.swift */; };
+		8BAAED4B24ACA12D00269666 /* AboutCanada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAAED4A24ACA12D00269666 /* AboutCanada.storyboard */; };
+		8BAAED4D24ACA13A00269666 /* AboutCanadaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4C24ACA13A00269666 /* AboutCanadaModel.swift */; };
+		8BAAED4F24ACA17700269666 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4E24ACA17700269666 /* BaseService.swift */; };
+		8BAAED5124ACA1A000269666 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED5024ACA1A000269666 /* Constants.swift */; };
+		8BAAED9324ACA8C100269666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9224ACA8C100269666 /* SceneDelegate.swift */; };
+		8BAAED9524ACABF500269666 /* AboutListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9424ACABF500269666 /* AboutListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +51,14 @@
 		8BAAED2C24AC995500269666 /* CanadaInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanadaInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAAED3024AC995500269666 /* CanadaInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfoUITests.swift; sourceTree = "<group>"; };
 		8BAAED3224AC995500269666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BAAED4624ACA10300269666 /* AboutCanadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewController.swift; sourceTree = "<group>"; };
+		8BAAED4824ACA11F00269666 /* AboutCanadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModel.swift; sourceTree = "<group>"; };
+		8BAAED4A24ACA12D00269666 /* AboutCanada.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutCanada.storyboard; sourceTree = "<group>"; };
+		8BAAED4C24ACA13A00269666 /* AboutCanadaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaModel.swift; sourceTree = "<group>"; };
+		8BAAED4E24ACA17700269666 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		8BAAED5024ACA1A000269666 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8BAAED9224ACA8C100269666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8BAAED9424ACABF500269666 /* AboutListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				8BAAED0E24AC995400269666 /* AppDelegate.swift */,
+				8BAAED9224ACA8C100269666 /* SceneDelegate.swift */,
 				8BAAED4124AC9CB000269666 /* AboutCanada */,
 				8BAAED3F24AC9BFF00269666 /* Common */,
 				8BAAED3E24AC9BEC00269666 /* Services */,
@@ -125,6 +142,7 @@
 		8BAAED3E24AC9BEC00269666 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8BAAED4E24ACA17700269666 /* BaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -132,6 +150,7 @@
 		8BAAED3F24AC9BFF00269666 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8BAAED5024ACA1A000269666 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -150,6 +169,7 @@
 		8BAAED4224AC9CC800269666 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BAAED4C24ACA13A00269666 /* AboutCanadaModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +177,7 @@
 		8BAAED4324AC9CCB00269666 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8BAAED4824ACA11F00269666 /* AboutCanadaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,6 +185,7 @@
 		8BAAED4424AC9CCD00269666 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8BAAED4A24ACA12D00269666 /* AboutCanada.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +193,8 @@
 		8BAAED4524AC9CD000269666 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8BAAED4624ACA10300269666 /* AboutCanadaViewController.swift */,
+				8BAAED9424ACABF500269666 /* AboutListTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -279,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAAED4B24ACA12D00269666 /* AboutCanada.storyboard in Resources */,
 				8BAAED1B24AC995500269666 /* LaunchScreen.storyboard in Resources */,
 				8BAAED1824AC995500269666 /* Assets.xcassets in Resources */,
 			);
@@ -305,7 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAAED4724ACA10300269666 /* AboutCanadaViewController.swift in Sources */,
+				8BAAED9524ACABF500269666 /* AboutListTableViewCell.swift in Sources */,
+				8BAAED9324ACA8C100269666 /* SceneDelegate.swift in Sources */,
+				8BAAED4D24ACA13A00269666 /* AboutCanadaModel.swift in Sources */,
+				8BAAED4924ACA11F00269666 /* AboutCanadaViewModel.swift in Sources */,
+				8BAAED4F24ACA17700269666 /* BaseService.swift in Sources */,
 				8BAAED0F24AC995400269666 /* AppDelegate.swift in Sources */,
+				8BAAED5124ACA1A000269666 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C6ATSKY8Y;
 				INFOPLIST_FILE = CanadaInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,6 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C6ATSKY8Y;
 				INFOPLIST_FILE = CanadaInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
