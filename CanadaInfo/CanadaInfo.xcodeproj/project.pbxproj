@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8BAAED0F24AC995400269666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED0E24AC995400269666 /* AppDelegate.swift */; };
-		8BAAED1124AC995400269666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED1024AC995400269666 /* SceneDelegate.swift */; };
-		8BAAED1324AC995400269666 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED1224AC995400269666 /* ViewController.swift */; };
-		8BAAED1624AC995400269666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAAED1424AC995400269666 /* Main.storyboard */; };
 		8BAAED1824AC995500269666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAAED1724AC995500269666 /* Assets.xcassets */; };
 		8BAAED1B24AC995500269666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAAED1924AC995500269666 /* LaunchScreen.storyboard */; };
 		8BAAED2624AC995500269666 /* CanadaInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED2524AC995500269666 /* CanadaInfoTests.swift */; };
@@ -37,9 +34,6 @@
 /* Begin PBXFileReference section */
 		8BAAED0B24AC995400269666 /* CanadaInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanadaInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAAED0E24AC995400269666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BAAED1024AC995400269666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8BAAED1224AC995400269666 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8BAAED1524AC995400269666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BAAED1724AC995500269666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BAAED1A24AC995500269666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAAED1C24AC995500269666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,9 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				8BAAED0E24AC995400269666 /* AppDelegate.swift */,
-				8BAAED1024AC995400269666 /* SceneDelegate.swift */,
-				8BAAED1224AC995400269666 /* ViewController.swift */,
-				8BAAED1424AC995400269666 /* Main.storyboard */,
+				8BAAED4124AC9CB000269666 /* AboutCanada */,
+				8BAAED3F24AC9BFF00269666 /* Common */,
+				8BAAED3E24AC9BEC00269666 /* Services */,
 				8BAAED1724AC995500269666 /* Assets.xcassets */,
 				8BAAED1924AC995500269666 /* LaunchScreen.storyboard */,
 				8BAAED1C24AC995500269666 /* Info.plist */,
@@ -126,6 +120,59 @@
 				8BAAED3224AC995500269666 /* Info.plist */,
 			);
 			path = CanadaInfoUITests;
+			sourceTree = "<group>";
+		};
+		8BAAED3E24AC9BEC00269666 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8BAAED3F24AC9BFF00269666 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8BAAED4124AC9CB000269666 /* AboutCanada */ = {
+			isa = PBXGroup;
+			children = (
+				8BAAED4524AC9CD000269666 /* ViewController */,
+				8BAAED4424AC9CCD00269666 /* View */,
+				8BAAED4324AC9CCB00269666 /* ViewModel */,
+				8BAAED4224AC9CC800269666 /* Model */,
+			);
+			path = AboutCanada;
+			sourceTree = "<group>";
+		};
+		8BAAED4224AC9CC800269666 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BAAED4324AC9CCB00269666 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8BAAED4424AC9CCD00269666 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BAAED4524AC9CD000269666 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +281,6 @@
 			files = (
 				8BAAED1B24AC995500269666 /* LaunchScreen.storyboard in Resources */,
 				8BAAED1824AC995500269666 /* Assets.xcassets in Resources */,
-				8BAAED1624AC995400269666 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BAAED1324AC995400269666 /* ViewController.swift in Sources */,
 				8BAAED0F24AC995400269666 /* AppDelegate.swift in Sources */,
-				8BAAED1124AC995400269666 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8BAAED1424AC995400269666 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8BAAED1524AC995400269666 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8BAAED1924AC995500269666 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
