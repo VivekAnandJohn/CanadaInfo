@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AboutCanadaViewController: UIViewController {
     // tableview for displaying Canada details
@@ -50,7 +51,7 @@ class AboutCanadaViewController: UIViewController {
     
     // fetching service data and updating table view
     private func updateUI() {
-        self.viewModel.getAboutCanadaDetails() { [weak self] error in
+        self.viewModel.getAboutCanadaDetails { [weak self] error in
             DispatchQueue.main.async {
                 guard let strongSelf = self else {
                     return
@@ -83,7 +84,9 @@ extension AboutCanadaViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             cell.lblDescription.text = item?.desc
             cell.lblTitle.text = item?.title
-            //cell.imageView?.image = 
+            if let url = URL(string: item?.imagePath ?? "") {
+            cell.imgIcon.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "default"))
+            }
         return cell
         }
         return UITableViewCell()

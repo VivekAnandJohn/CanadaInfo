@@ -12,7 +12,7 @@ class BaseService {
     
     // Base service request for all controllers
     
-    func request<T: Decodable>(for url: URL,  completionHandler: @escaping ((Result<T, Error>) -> Void)) {
+    func request<T: Decodable>(for url: URL, completionHandler: @escaping ((Result<T, Error>) -> Void)) {
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let responseError = error {
@@ -48,8 +48,7 @@ class BaseService {
                 let decoder = JSONDecoder()
                 let concreteResponse = try decoder.decode(T.self, from: unescapedRawData)
                 completionHandler(.success(concreteResponse))
-            }
-            catch {
+            } catch {
                 // finding error
                 //print("Error: \(error.localizedDescription)")
             }
