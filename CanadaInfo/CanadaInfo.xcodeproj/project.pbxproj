@@ -13,7 +13,7 @@
 		8BAAED0F24AC995400269666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED0E24AC995400269666 /* AppDelegate.swift */; };
 		8BAAED1824AC995500269666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAAED1724AC995500269666 /* Assets.xcassets */; };
 		8BAAED1B24AC995500269666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAAED1924AC995500269666 /* LaunchScreen.storyboard */; };
-		8BAAED2624AC995500269666 /* CanadaInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED2524AC995500269666 /* CanadaInfoTests.swift */; };
+		8BAAED2624AC995500269666 /* AboutCanadaViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED2524AC995500269666 /* AboutCanadaViewControllerTests.swift */; };
 		8BAAED3124AC995500269666 /* CanadaInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED3024AC995500269666 /* CanadaInfoUITests.swift */; };
 		8BAAED4724ACA10300269666 /* AboutCanadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4624ACA10300269666 /* AboutCanadaViewController.swift */; };
 		8BAAED4924ACA11F00269666 /* AboutCanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4824ACA11F00269666 /* AboutCanadaViewModel.swift */; };
@@ -23,6 +23,7 @@
 		8BAAED5124ACA1A000269666 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED5024ACA1A000269666 /* Constants.swift */; };
 		8BAAED9324ACA8C100269666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9224ACA8C100269666 /* SceneDelegate.swift */; };
 		8BAAED9524ACABF500269666 /* AboutListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9424ACABF500269666 /* AboutListTableViewCell.swift */; };
+		8BAAED9B24AD096700269666 /* AboutCanadaViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9A24AD096700269666 /* AboutCanadaViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,7 @@
 		8BAAED1A24AC995500269666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAAED1C24AC995500269666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BAAED2124AC995500269666 /* CanadaInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanadaInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BAAED2524AC995500269666 /* CanadaInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfoTests.swift; sourceTree = "<group>"; };
+		8BAAED2524AC995500269666 /* AboutCanadaViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewControllerTests.swift; sourceTree = "<group>"; };
 		8BAAED2724AC995500269666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BAAED2C24AC995500269666 /* CanadaInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanadaInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAAED3024AC995500269666 /* CanadaInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfoUITests.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		8BAAED5024ACA1A000269666 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8BAAED9224ACA8C100269666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8BAAED9424ACABF500269666 /* AboutListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutListTableViewCell.swift; sourceTree = "<group>"; };
+		8BAAED9A24AD096700269666 /* AboutCanadaViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModelTest.swift; sourceTree = "<group>"; };
 		995C8A808C274133C3156149 /* Pods-CanadaInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanadaInfo.debug.xcconfig"; path = "Target Support Files/Pods-CanadaInfo/Pods-CanadaInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		DF11C71D00583918BAA74C57 /* Pods_CanadaInfo_CanadaInfoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanadaInfo_CanadaInfoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E663AEAA91AECDDCD65E382C /* Pods-CanadaInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanadaInfoTests.debug.xcconfig"; path = "Target Support Files/Pods-CanadaInfoTests/Pods-CanadaInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,7 +166,8 @@
 		8BAAED2424AC995500269666 /* CanadaInfoTests */ = {
 			isa = PBXGroup;
 			children = (
-				8BAAED2524AC995500269666 /* CanadaInfoTests.swift */,
+				8BAAED2524AC995500269666 /* AboutCanadaViewControllerTests.swift */,
+				8BAAED9A24AD096700269666 /* AboutCanadaViewModelTest.swift */,
 				8BAAED2724AC995500269666 /* Info.plist */,
 			);
 			path = CanadaInfoTests;
@@ -511,7 +514,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BAAED2624AC995500269666 /* CanadaInfoTests.swift in Sources */,
+				8BAAED9B24AD096700269666 /* AboutCanadaViewModelTest.swift in Sources */,
+				8BAAED2624AC995500269666 /* AboutCanadaViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -103,8 +103,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAa-di-2lD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Canada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2t-RI-9cd">
-                                        <rect key="frame" x="132.5" y="51" width="149" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2t-RI-9cd">
+                                        <rect key="frame" x="165" y="51" width="84.5" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -132,6 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fRj-QV-LyZ"/>
                     <connections>
+                        <outlet property="lblTitle" destination="J2t-RI-9cd" id="qRI-7e-5mJ"/>
                         <outlet property="tableViewList" destination="l9U-VO-4ok" id="hrL-fk-cd6"/>
                     </connections>
                 </viewController>
