@@ -13,6 +13,9 @@ class AboutCanadaViewController: UIViewController {
     // tableview for displaying Canada details
     @IBOutlet var tableViewList: UITableView!
     
+    //label for displaying page title
+    @IBOutlet var lblTitle: UILabel!
+    
     //view model for fetching data
     var viewModel = AboutCanadaViewModel()
     
@@ -34,7 +37,7 @@ class AboutCanadaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tableViewList.addSubview(self.refreshControl)
+        tableViewList.addSubview(refreshControl)
         updateUI()
     }
     
@@ -50,13 +53,14 @@ class AboutCanadaViewController: UIViewController {
     }
     
     // fetching service data and updating table view
-    private func updateUI() {
+    func updateUI() {
         self.viewModel.getAboutCanadaDetails { [weak self] error in
             DispatchQueue.main.async {
                 guard let strongSelf = self else {
                     return
                 }
                 if error == nil {
+                    strongSelf.lblTitle.text = self?.viewModel.titleString
                     strongSelf.listArray = self?.viewModel.rowModel
                     strongSelf.tableViewList.reloadData()
                 }
