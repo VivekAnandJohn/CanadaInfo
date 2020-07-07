@@ -27,7 +27,7 @@ class AboutCanadaViewController: UIViewController {
         
         return refreshControl
     }()
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

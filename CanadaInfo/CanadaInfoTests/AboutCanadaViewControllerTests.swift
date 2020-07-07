@@ -30,6 +30,10 @@ class AboutCanadaViewControllerTests: XCTestCase {
             XCTAssertNotNil(aboutCanadaVC,
                             "VisualSearchViewController should not be nil")
         }
+        
+        if let keyWindow = UIWindow.key {
+            keyWindow.rootViewController = sut
+        }
     }
     
     override func tearDown() {
@@ -66,6 +70,28 @@ class AboutCanadaViewControllerTests: XCTestCase {
     func testTableViewCellCreateCellsWithReuseIdentifier() {
         let indexpath = IndexPath(row: 0, section: 0)
         let cell = sut.tableView(sut.tableViewList, cellForRowAt: indexpath)
-        XCTAssertTrue(cell.reuseIdentifier == "AboutListTableViewCell")
+        let titleOne = "TitleOne"
+        let descOne = "DescOne"
+        var row = Row()
+        row.desc = descOne
+        row.title = titleOne
+        if let aboutCell = cell as? AboutListTableViewCell {
+            aboutCell.configure(item: row)
+            XCTAssertEqual(aboutCell.lblTitle.text, titleOne, "Title text should match")
+            XCTAssertEqual(aboutCell.lblDescription.text, descOne, "Title text should match")
+            XCTAssertEqual(aboutCell.imageView?.image, nil, "No image to display")
+        }
+    }
+    
+    func testAlert() {
+        Alert.present(title: Alert.Network.title,
+        message: "Error Message",
+        actions: .close,
+            from: sut)
+        XCTAssertTrue(sut.presentedViewController is UIAlertController)
+        XCTAssertEqual(sut.presentedViewController?.title, "Network Error")
+        let alertController = sut.presentedViewController as? UIAlertController
+        let action = alertController?.actions[0]
+        XCTAssertEqual(action?.title, "Ok")
     }
 }
