@@ -11,28 +11,15 @@ import Foundation
 class AboutCanadaViewModel {
 
     var rowModel: [Row]?
-    var titleString = "No Data"
+    var titleString = Alert.Network.noData
     
     // MARK: - Webservice Request
-    func getAboutCanadaDetails(completionHandler: @escaping (Error?) -> Void) {
-        //url
-        guard let url = URL(string: API.urlAboutCanada) else { return }
-
-        //requesting for data
-        let service = BaseService()
-        service.request(for: url) { (result: Result<AboutCanadaModel, Error>) in
-            switch result {
-            case .success(let details):
-                if let title = details.title {
-                    self.titleString = title
-                }
-                if let rows = details.rows {
-                    self.rowModel = rows
-                }
-                completionHandler(nil)
-            case .failure(let error):
-                //finding error
-                print(error)
+    func getAboutCanadaDetails(completion :@escaping (Error?) -> Void) {
+        AboutCanadaService().getAboutCanadaDetails { details, error  in
+            self.titleString = details.title ?? Alert.Network.noData
+            self.rowModel = details.rows
+            DispatchQueue.main.async {
+                completion(error)
             }
         }
     }

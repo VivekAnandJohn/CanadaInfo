@@ -24,7 +24,7 @@ class AboutCanadaViewControllerTests: XCTestCase {
             let view = aboutCanadaVC.view
             sut.beginAppearanceTransition(true, animated: true)
             sut.endAppearanceTransition()
-            XCTAssertNotEqual(aboutCanadaVC.listArray?.count, 0, "Array contain value")
+            XCTAssertNotEqual(aboutCanadaVC.viewModel.rowModel?.count, 0, "Array contain value")
             XCTAssertNotNil(view,
                             "View should not be nil")
             XCTAssertNotNil(aboutCanadaVC,
@@ -54,7 +54,7 @@ class AboutCanadaViewControllerTests: XCTestCase {
     }
     
     func testTableViewNumberOfSection() {
-        XCTAssertTrue(sut.tableViewList.numberOfRows(inSection: 0) == sut.listArray?.count ?? 0)
+        XCTAssertTrue(sut.tableViewList.numberOfRows(inSection: 0) == sut.viewModel.rowModel?.count ?? 0)
     }
     
     func testUpdateUI() {

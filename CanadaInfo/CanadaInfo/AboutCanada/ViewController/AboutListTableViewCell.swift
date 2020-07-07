@@ -25,4 +25,18 @@ class AboutListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    func configure(item: Row) {
+        if let imagePath = item.imagePath {
+            if let url = URL(string: imagePath) {
+                imgIcon.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "default"))
+            }
+        }
+        if let title = item.title {
+            lblTitle.text = title
+        }
+        if let desc = item.desc {
+            lblDescription.text = desc
+        }
+    }
 }
