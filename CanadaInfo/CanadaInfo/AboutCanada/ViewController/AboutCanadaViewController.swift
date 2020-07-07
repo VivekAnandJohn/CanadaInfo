@@ -27,9 +27,7 @@ class AboutCanadaViewController: UIViewController {
         
         return refreshControl
     }()
-    // array stroing tableview data
-    var listArray: [Row]?
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -41,11 +39,6 @@ class AboutCanadaViewController: UIViewController {
         updateUI()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-     
     // tableview refresh controller
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         updateUI()
@@ -54,16 +47,26 @@ class AboutCanadaViewController: UIViewController {
     
     // fetching service data and updating table view
     func updateUI() {
-        self.viewModel.getAboutCanadaDetails { [weak self] error in
+        if currentReachabilityStatus == .notReachable {
+            self.refreshControl.endRefreshing()
             DispatchQueue.main.async {
-                guard let strongSelf = self else {
-                    return
+                Alert.present(title: Alert.Network.title,
+                              message: Alert.Network.message,
+                              actions: .retry(handler: {
+                                self.updateUI()
+                              }), .close,
+                                  from: self)
+            }
+        } else {
+            self.viewModel.getAboutCanadaDetails { error in
+                if let error = error {
+                    Alert.present(title: Alert.Network.title,
+                                  message: error.localizedDescription,
+                                  actions: .close,
+                                      from: self)
                 }
-                if error == nil {
-                    strongSelf.lblTitle.text = self?.viewModel.titleString
-                    strongSelf.listArray = self?.viewModel.rowModel
-                    strongSelf.tableViewList.reloadData()
-                }
+                self.lblTitle.text = self.viewModel.titleString
+                self.tableViewList.reloadData()
             }
         }
     }
@@ -76,24 +79,23 @@ class AboutCanadaViewController: UIViewController {
  * TableView will display the Canada Details
  */
 extension AboutCanadaViewController: UITableViewDataSource {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listArray?.count ?? 0
+        return self.viewModel.rowModel?.count ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Dequeue Reusable Cell
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "AboutListTableViewCell") as? AboutListTableViewCell {
-            let item = listArray?[indexPath.row]
             cell.selectionStyle = .none
-            cell.lblDescription.text = item?.desc
-            cell.lblTitle.text = item?.title
-            if let url = URL(string: item?.imagePath ?? "") {
-            cell.imgIcon.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "default"))
+            cell.lblTitle.text = ""
+            cell.lblDescription.text = ""
+            cell.imgIcon.image = #imageLiteral(resourceName: "default")
+            if let item = self.viewModel.rowModel {
+                cell.configure(item: item[indexPath.row])
             }
-        return cell
+            return cell
         }
         return UITableViewCell()
     }
-
 }

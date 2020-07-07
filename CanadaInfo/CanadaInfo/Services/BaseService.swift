@@ -11,7 +11,6 @@ import Foundation
 class BaseService {
     
     // Base service request for all controllers
-    
     func request<T: Decodable>(for url: URL, completionHandler: @escaping ((Result<T, Error>) -> Void)) {
         
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -20,7 +19,6 @@ class BaseService {
             }
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
                 // finding error
-                //print("Error: invalid HTTP response code")
                 let unknownError = NSError(domain: "Default Error Domain",
                                            code: -101,
                                            userInfo: [NSLocalizedDescriptionKey: "Something went wrong"])
@@ -49,8 +47,7 @@ class BaseService {
                 let concreteResponse = try decoder.decode(T.self, from: unescapedRawData)
                 completionHandler(.success(concreteResponse))
             } catch {
-                // finding error
-                //print("Error: \(error.localizedDescription)")
+                // error
             }
         }.resume()
     }

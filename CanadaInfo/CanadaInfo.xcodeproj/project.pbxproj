@@ -21,9 +21,13 @@
 		8BAAED4D24ACA13A00269666 /* AboutCanadaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4C24ACA13A00269666 /* AboutCanadaModel.swift */; };
 		8BAAED4F24ACA17700269666 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED4E24ACA17700269666 /* BaseService.swift */; };
 		8BAAED5124ACA1A000269666 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED5024ACA1A000269666 /* Constants.swift */; };
-		8BAAED9324ACA8C100269666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9224ACA8C100269666 /* SceneDelegate.swift */; };
 		8BAAED9524ACABF500269666 /* AboutListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9424ACABF500269666 /* AboutListTableViewCell.swift */; };
 		8BAAED9B24AD096700269666 /* AboutCanadaViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAAED9A24AD096700269666 /* AboutCanadaViewModelTest.swift */; };
+		8BAEE65B24B48A02007E9D35 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEE65A24B48A02007E9D35 /* Reachability.swift */; };
+		8BAEE65D24B48C14007E9D35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEE65C24B48C14007E9D35 /* Extensions.swift */; };
+		8BAEE65F24B49281007E9D35 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEE65E24B49281007E9D35 /* Alert.swift */; };
+		8BAEE66124B49F44007E9D35 /* AboutCanadaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEE66024B49F44007E9D35 /* AboutCanadaService.swift */; };
+		8BAEE66324B4A99F007E9D35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAEE66224B4A99F007E9D35 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +70,13 @@
 		8BAAED4C24ACA13A00269666 /* AboutCanadaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaModel.swift; sourceTree = "<group>"; };
 		8BAAED4E24ACA17700269666 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		8BAAED5024ACA1A000269666 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8BAAED9224ACA8C100269666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8BAAED9424ACABF500269666 /* AboutListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutListTableViewCell.swift; sourceTree = "<group>"; };
 		8BAAED9A24AD096700269666 /* AboutCanadaViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModelTest.swift; sourceTree = "<group>"; };
+		8BAEE65A24B48A02007E9D35 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8BAEE65C24B48C14007E9D35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8BAEE65E24B49281007E9D35 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8BAEE66024B49F44007E9D35 /* AboutCanadaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaService.swift; sourceTree = "<group>"; };
+		8BAEE66224B4A99F007E9D35 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		995C8A808C274133C3156149 /* Pods-CanadaInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanadaInfo.debug.xcconfig"; path = "Target Support Files/Pods-CanadaInfo/Pods-CanadaInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		DF11C71D00583918BAA74C57 /* Pods_CanadaInfo_CanadaInfoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanadaInfo_CanadaInfoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E663AEAA91AECDDCD65E382C /* Pods-CanadaInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanadaInfoTests.debug.xcconfig"; path = "Target Support Files/Pods-CanadaInfoTests/Pods-CanadaInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				8BAAED0E24AC995400269666 /* AppDelegate.swift */,
-				8BAAED9224ACA8C100269666 /* SceneDelegate.swift */,
+				8BAEE66224B4A99F007E9D35 /* SceneDelegate.swift */,
 				8BAAED4124AC9CB000269666 /* AboutCanada */,
 				8BAAED3F24AC9BFF00269666 /* Common */,
 				8BAAED3E24AC9BEC00269666 /* Services */,
@@ -186,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				8BAAED4E24ACA17700269666 /* BaseService.swift */,
+				8BAEE66024B49F44007E9D35 /* AboutCanadaService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -194,6 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				8BAAED5024ACA1A000269666 /* Constants.swift */,
+				8BAEE65A24B48A02007E9D35 /* Reachability.swift */,
+				8BAEE65C24B48C14007E9D35 /* Extensions.swift */,
+				8BAEE65E24B49281007E9D35 /* Alert.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -501,12 +513,16 @@
 			files = (
 				8BAAED4724ACA10300269666 /* AboutCanadaViewController.swift in Sources */,
 				8BAAED9524ACABF500269666 /* AboutListTableViewCell.swift in Sources */,
-				8BAAED9324ACA8C100269666 /* SceneDelegate.swift in Sources */,
+				8BAEE66124B49F44007E9D35 /* AboutCanadaService.swift in Sources */,
 				8BAAED4D24ACA13A00269666 /* AboutCanadaModel.swift in Sources */,
 				8BAAED4924ACA11F00269666 /* AboutCanadaViewModel.swift in Sources */,
+				8BAEE65D24B48C14007E9D35 /* Extensions.swift in Sources */,
+				8BAEE65B24B48A02007E9D35 /* Reachability.swift in Sources */,
 				8BAAED4F24ACA17700269666 /* BaseService.swift in Sources */,
+				8BAEE65F24B49281007E9D35 /* Alert.swift in Sources */,
 				8BAAED0F24AC995400269666 /* AppDelegate.swift in Sources */,
 				8BAAED5124ACA1A000269666 /* Constants.swift in Sources */,
+				8BAEE66324B4A99F007E9D35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

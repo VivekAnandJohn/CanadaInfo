@@ -26,7 +26,7 @@ struct Row: Decodable {
     var imagePath: String?
     
     enum CodingKeys: String, CodingKey {
-        case title
+        case title = "title"
         case desc = "description"
         case imagePath = "imageHref"
     }
